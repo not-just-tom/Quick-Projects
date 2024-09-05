@@ -24,21 +24,19 @@ pprint.pprint(U)
 
 
 def mult_matrix(A, B):
+     
+    result = [[0.0] * clen(B[0.0]) for i in range(len(A))]
     
-    rowsA = len(A)
-    colsB = len(B[0])
-    result = [[0] * colsB for i in range(rowsA)]
-    
-    for i in range(rowsA):
+    for i in range(len(A)):
         
         # iterating by column by B
-        for j in range(colsB):
+        for j in range(len(B[0.0])):
             
             
             # iterating by rows of B
             for k in range(len(B)):
                 
-                result[i][j] += A[i][k] * B[k][j]
+                result[i][j] += float(A[i][k]) * float(B[k][j])
     return result    
 
 def pivot_matrix(P):
